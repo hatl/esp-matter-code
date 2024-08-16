@@ -1,0 +1,22 @@
+#pragma once
+
+static const int CONFIG_MAX_CONFIGURABLE_BUTTONS = 5;
+
+// nullptr = previously saved in flash
+#define DEFAULT_POWER true
+
+#ifdef CONFIG_IDF_TARGET_ESP32H2
+#define CHANNEL_1_PIN GPIO_NUM_4
+#define LED_INDICATOR_PIN GPIO_NUM_8
+#define ONBOARD_BUTTON_PIN GPIO_NUM_9
+#define BUTTON_1_PIN GPIO_NUM_21
+#define BUTTON_2_PIN GPIO_NUM_7
+#endif
+
+#ifdef CONFIG_IDF_TARGET_ESP32C6
+#define CHANNEL_1_PIN GPIO_NUM_23
+#define LED_INDICATOR_PIN GPIO_NUM_15
+#define ONBOARD_BUTTON_PIN GPIO_NUM_9
+#define BUTTON_1_PIN GPIO_NUM_21
+#define BUTTON_2_PIN GPIO_NUM_7
+#endif
